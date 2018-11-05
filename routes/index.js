@@ -222,6 +222,7 @@ router.get('/actividades/cumpleanos', (req, res) => {
         }
       }
     }
+    actividades2.le;
 
     if (!req.user) {
       res.render('actividades', {
