@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  //- 
+  - if(actividades.length>0)
+    ul.actividades
+      each val, index in actividades
+        li.actividad
+          h3 #{val.descripcion}
+          .fotos
+            each photo in val.archivos
+              - console.log(photo)
+              img(src=`/uploads/${photo}`, alt="" class="actividad-img")
+  - else
+    ul.actividades
+      h1.error Nada que mostrar

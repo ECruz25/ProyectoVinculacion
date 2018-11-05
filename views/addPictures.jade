@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form(action="subirFotos", method="post" enctype="multipart/form-data" class="normal-form")
+    label(for="/actividad") Nombre de Actividad
+      input(type="text", name="actividad")
+    label(for="/photo") Fotografías
+      input(type="file" name="file" value="upload" id="photo" accept="image/png, image/jpeg" multiple)
+    label Tipo de Actividad
+      select(name="tipoActividad")
+        option(value="Cumpleaños") Cumpleaños
+        option(value="Paseo Recreativo") Paseo Recreativo
+        option(value="Paseo Educativo") Paseo Educativo
+    input(type="submit" value="Save →" class="button")

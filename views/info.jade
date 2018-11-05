@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .bodyy
+    .body-header
+      h1(class="titulo") Misión
+      - if(loggedIn===true) 
+        a(href="/editMision") [editar]
+    p #{mision}
+    .body-header
+      h1(class="titulo") Visión
+      - if(loggedIn===true) 
+        a(href="/editVision") [editar]
+    p #{vision}

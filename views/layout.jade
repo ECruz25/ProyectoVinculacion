@@ -1,0 +1,59 @@
+doctype html
+html
+  head
+    title= "CDI Nacion Santa"
+    link(rel="stylesheet" href="stylesheets/skel.css")
+    link(rel="stylesheet" href="stylesheets/style.css")
+    link(rel="stylesheet" href="stylesheets/style-xlarge.css")
+    link(rel="stylesheet" href="../stylesheets/skel.css")
+    link(rel="stylesheet" href="../stylesheets/style.css")
+    link(rel="stylesheet" href="../stylesheets/style-xlarge.css")
+
+  body
+    header(id="header")
+      h1
+        a(href="/")
+          img(src="/images/logo.png", alt="" class="logo")
+      nav
+        ul
+          li
+            a(class="nav-item" href='/') Inicio
+          li
+            a(class="nav-item" href='/historia') Historia
+          li
+            a(class="nav-item" href='/info') Misión y Visión
+          li
+            a(class="nav-item" href='/objetivos') Objetivos
+          li
+            div(class="nav-item dropdown") 
+              button(class="dropbtn") Actividades
+              .dropdown-content
+                a(href="/actividades/cumpleanos") Cumpleaños
+                a(href="/actividades/paseorecreativo") Paseo Recreativo
+                a(href="/actividades/paseoeducativo") Paseo Educativo
+                - if(loggedIn===true) 
+                  a(href="/subirActividades") Subir Actividad
+          
+    block content
+  
+footer(id="footer")
+  .container
+    h2 Contáctanos
+    .row
+      section(class="4u 12u(medium) 12u$(small)")
+        ul.alt
+          li
+            h3 Dirección
+            h5 Col. Lempira 1 Sector Chamelecon cuadra y media abajo del Minisuper el descuento, Edificio Iglesia Cuadrangular
+      section(class="4u 12u$(medium) 12u$(small)")
+        ul.tabular
+          li
+            h3 Teléfono
+            h5 +504 8730-8649
+      section(class="4u$ 12u$(medium) 12u$(small)")
+        ul.tabular
+          li
+            h3 Correo Electrónico
+            h5 ho376nacionsanta@yahoo.com
+  a(href="/login") login
+

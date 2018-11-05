@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  form(action=`/edit${informacion}`, method="post")
+    textarea(name="editArea", cols="20", rows="10") #{info}
+    input(type="submit", value="Guardar")

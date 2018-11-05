@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  .bodyy
+    .body-header
+      h1(class="titulo") Historia
+      - if(loggedIn===true) 
+        a(href="/editHistoria") [editar]
+    p #{historia}
